@@ -27,6 +27,11 @@ jobs:
           echo "The repository ${{ github.repository }} contains the following files:"
           tree
 
+      - name: Test Log Levels
+        run: |
+          echo "::warning file=app.js,line=10::This is a code warning."
+          echo "::error file=app.js.js,line=15,col=5::Critical sync error found!"
+
   Deploy:
     runs-on: ubuntu-latest
     needs: Build
@@ -38,7 +43,4 @@ jobs:
       - name: Use Value
         run: echo "The build ID is ${{ steps.generator.outputs.build_id }}"
 
-      - name: Test Log Levels
-        run: |
-          echo "::warning file=app.js,line=10::This is a code warning."
-          echo "::error file=app.js.js,line=15,col=5::Critical sync error found!"
+
