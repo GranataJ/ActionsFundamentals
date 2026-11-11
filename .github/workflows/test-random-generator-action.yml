@@ -13,7 +13,7 @@ jobs:
 
       - name: Call Random Generator Action
         id: 22
-        uses: ./.github/action/random-generator
+        uses: ./.github/actions/random-generator
         with:
           user-name: 'Bob'
 
