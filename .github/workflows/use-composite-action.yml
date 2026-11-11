@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Run random number generator
         id: random-number
-        uses: chendanou/composite-action@602ed672364bb134af804225219e8d0ac2a48abc
+        uses: GranataJ/JG-Action1@v1
         with:
           user-name: Developer
 
