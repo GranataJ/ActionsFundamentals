@@ -13,7 +13,7 @@ jobs:
 
       - name: Call Random Generator Action
         id: custom_rng
-        uses: ./.github/actions/random-generator
+        uses: ./.github/workflows/random-generator
         with:
           user-name: 'Bob'
 
