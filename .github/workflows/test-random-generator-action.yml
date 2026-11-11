@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Call Random Generator Action
-        id: custom_rng
+        id: 22
         uses: ./.github/action/random-generator
         with:
           user-name: 'Bob'
