@@ -2,12 +2,6 @@ name: Use Composite Action
 
 on:
   workflow_dispatch:
-    inputs:
-      user-name:
-        description: Name to greet
-        required: true
-        default: Developer
-        type: string
 
 jobs:
   use-action:
@@ -17,7 +11,7 @@ jobs:
         id: random-number
         uses: chendanou/composite-action@602ed672364bb134af804225219e8d0ac2a48abc
         with:
-          user-name: ${{ inputs.user-name }}
+          user-name: Developer
 
       - name: Print generated number
         run: echo "Generated number: ${{ steps.random-number.outputs.generated-number }}"
