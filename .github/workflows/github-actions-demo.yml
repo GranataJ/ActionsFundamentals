@@ -27,7 +27,10 @@ jobs:
           echo "The repository ${{ github.repository }} contains the following files:"
           tree
 
-      
+  Deploy:
+    runs-on: ubuntu-latest
+    needs: Build
+    steps:
       - name: Generator Value
         id: generator
         run: echo "build_id=12345" >> $GITHUB_OUTPUT
